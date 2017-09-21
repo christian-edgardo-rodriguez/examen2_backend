@@ -19,7 +19,7 @@ exports.buscarPosiblesNombre = {
      scope: ['admin']
    },
   handler: function(request, reply){
-  var posibles = posible.find({{nombre:request.params.nombre}});
+  var posibles = posible.find({nombre:request.params.nombre});
     reply(posibles);
   }
 }
@@ -30,7 +30,7 @@ exports.buscarPosiblesPeso = {
      scope: ['admin']
    },
   handler: function(request, reply){
-  var posibles = posible.find({{peso:request.params.peso}});
+  var posibles = posible.find({peso:request.params.peso});
     reply(posibles);
   }
 }
@@ -41,7 +41,7 @@ exports.buscarPosiblesTipo = {
      scope: ['admin']
    },
   handler: function(request, reply){
-  var posibles = posible.find({{tipo:request.params.tipo}});
+  var posibles = posible.find({tipo:request.params.tipo});
     reply(posibles);
   }
 }
@@ -52,7 +52,7 @@ exports.buscarPosiblesHastaDonde = {
      scope: ['admin']
    },
   handler: function(request, reply){
-  var posibles = posible.find({{hastaDonde:request.params.hastaDonde}});
+  var posibles = posible.find({hastaDonde:request.params.hastaDonde});
     reply(posibles);
   }
 }
@@ -63,7 +63,7 @@ exports.buscarPosiblesEnergia = {
      scope: ['admin']
    },
   handler: function(request, reply){
-  var posibles = posible.find({{energia:request.params.energia}});
+  var posibles = posible.find({energia:request.params.energia});
     reply(posibles);
   }
 }
