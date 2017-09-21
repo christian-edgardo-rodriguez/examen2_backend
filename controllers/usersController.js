@@ -2,7 +2,7 @@ var user = require('../schemas/user');
 var boom = require('boom');
 var bcrypt = require('bcrypt');
 
-exports.createUser = {
+exports.crearUsuario = {
      auth: false,
     handler: function(request, reply) {
        bcrypt.hash(request.payload.contraseña, 10, function(err, hash){
