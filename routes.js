@@ -1,5 +1,5 @@
 var posibleController = require('./controllers/posibleController');
-var usuarioController = require('./controllers/userController');
+var usuarioController = require('./controllers/usersController');
 var authController = require('./controllers/authController');
 
 exports.endpoints = [{method: 'GET', path: '/', config: {handler: function(request, reply){reply('API v1, Posible')}}},
