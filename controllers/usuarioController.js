@@ -26,6 +26,18 @@ exports.buscarUsuariosNombre = {
   }
 }
 
+exports.buscarUsuariosId = {
+  /*auth: {
+     mode:'required',
+     strategy:'session',
+     scope: ['admin', 'regular']
+   },*/
+  handler: function(request, reply){
+  var usuarios = usuario.find({_id:request.params._id});
+    reply(usuarios);
+  }
+}
+
 exports.crearUsuario = {
   /*auth: {
      mode:'required',

@@ -5,6 +5,7 @@ var authController = require('./controllers/authController');
 exports.endpoints = [{method: 'GET', path: '/', config: {handler: function(request, reply){reply('API v1, Posible')}}},
 	{method: 'GET', path: '/usuarios', config: usuarioController.buscarUsuarios},
 	{method: 'GET', path: '/nombreUsuario/{nombreUsuario}', config: usuarioController.buscarUsuariosNombre},
+  {method: 'GET', path: '/id/{_id}', config: usuarioController.buscarUsuariosId},
   {method: 'POST', path: '/crearUsuario', config: usuarioController.crearUsuario},
   {method: 'PUT', path: '/modificarUsuario', config: usuarioController.modificarUsuario},
   {method: 'DELETE', path: '/borrarUsuario', config: usuarioController.borrarUsuario},
