@@ -3,7 +3,8 @@ var usuarioController = require('./controllers/usersController');
 var authController = require('./controllers/authController');
 
 exports.endpoints = [{method: 'GET', path: '/', config: {handler: function(request, reply){reply('API v1, Posible')}}},
-  {method: 'POST', path: '/crearUsuario', config: usuarioController.crearUsuario},
+	{method: 'GET', path: '/usuarios', config: usuarioController.buscarUsuarios},
+	{method: 'GET', path: '/nombreUsuario/{nombreUsuario}', config: usuarioController.buscarUsuariosNombre},
     {method: 'GET', path: '/posibles', config: posibleController.buscarPosibles},
   {method: 'POST', path: '/crearPosible', config: posibleController.crearPosible},
   {method: 'PUT', path: '/modificarPosible', config: posibleController.modificarPosible}, 

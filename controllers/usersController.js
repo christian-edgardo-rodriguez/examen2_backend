@@ -23,3 +23,10 @@ exports.crearUsuario = {
         })
     }
   };
+
+  exports.buscarUsuariosNombre = {
+  handler: function(request, reply){
+  var posibles = user.find({nombreUsuario:request.params.nombreUsuario});
+    reply(posibles);
+  }
+}
